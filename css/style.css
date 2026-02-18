@@ -118,7 +118,69 @@ p {
 }
 
 /* Benefits Section */
-.benefits {
+/* Rounded rectangle frame for benefits */
+.benefits-heading {
+  font-size: 36px;
+  color: #064d00;      /* dark green */
+  text-align: center;   /* centers the heading */
+  margin-bottom: 50px;  /* spacing below the heading */
+}
+
+.benefit-frame {
+  display: flex;              /* Flex layout applied to frame */
+  align-items: center;
+  background-color: #f8f8f8; /* off-white */
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+}
+
+/* Reverse alignment for 2nd benefit */
+.benefit-frame.reverse {
+  flex-direction: row-reverse;
+}
+
+.benefit-frame .benefit-img,
+.benefit-frame .benefit-text {
+  flex: 1;
+  padding: 20px;
+    text-align: center;    /* center the heading */
+
+}
+
+.benefit-frame .benefit-img img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.benefit-frame .benefit-text h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;   /* Center the heading */
+}
+
+
+/* .benefit-frame .benefit-text h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+} */
+
+.benefit-frame .benefit-text p {
+  font-size: 20px;
+  line-height: 1.6;
+    text-align: center;    /* center the heading */
+
+}
+.center-cta {
+  display: flex;
+  justify-content: center;   /* centers the button horizontally */
+  margin-top: 30px;          /* optional spacing above */
+}
+
+
+/* .benefits {
   padding: 100px 50px;
   background-color: #ffffff;
 }
@@ -160,7 +222,7 @@ p {
   background-color: #f1f1f1;
   border-radius: 25px;
   margin: 15px auto 0 auto;
-}
+} */
 
 /* How it Works */
 .how {
