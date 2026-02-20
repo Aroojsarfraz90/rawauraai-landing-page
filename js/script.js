@@ -1,16 +1,29 @@
-// SLIDER
-let slides=document.querySelectorAll('.slide');
-let current=0;
+// UPDATED SLIDER (SMOOTH LOOP - 3 IMAGES)
 
-function showSlide(i){
-  slides.forEach(s=>s.classList.remove('active'));
-  slides[i].classList.add('active');
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-setInterval(()=>{
-  current=(current+1)%slides.length;
-  showSlide(current);
-},5000);
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  // Make sure first slide is active
+  if (slides.length > 0) {
+    slides[0].classList.add('active');
+  }
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  setInterval(() => {
+    current++;
+    if (current >= slides.length) {
+      current = 0;
+    }
+    showSlide(current);
+  }, 4000);
+
+});
 
 // THANK YOU MESSAGE
 function showThankYou(){
