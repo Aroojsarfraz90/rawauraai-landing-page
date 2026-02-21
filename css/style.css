@@ -40,7 +40,36 @@ h1, h2, h3, h4, h5, h6 {
   z-index:1000;
 }
 
-.logo img{height:50px;}
+/* HEADER LOGO + BRAND TEXT */
+.logo-wrapper {
+  display: flex;            /* logo left, text right */
+  align-items: center;      /* vertical alignment */
+  gap: 16px;                /* horizontal space between logo and text */
+}
+
+.logo-wrapper .logo-img {
+  height: 60px;             /* consistent logo size */
+  width: auto;
+  display: block;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;   /* stack brand name above tagline */
+}
+
+.brand-text h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #064d00;           /* dark green brand name */
+}
+
+.brand-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;              /* tagline color */
+}
 
 .hero{
   padding-top:120px;
@@ -96,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-content h1{font-size:45px;color:#064d00;}
-.hero-content h2{font-size:24px;color:#000000;}
+.hero-content h2{font-size:24px;color: #000000;}
 
 
 .cta-btn{
